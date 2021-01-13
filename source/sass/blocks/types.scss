@@ -1,0 +1,13 @@
+.types {
+  background-color: $bg-light;
+}
+
+.types__list {
+  @include ul();
+}
+
+.types__description {
+  @include font(22px, 34px, 600);
+  text-align: center;
+  letter-spacing: -0.5px;
+}

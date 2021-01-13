@@ -1,0 +1,11 @@
+.video {
+  background-color: $bg-dark;
+}
+
+.video__text {
+  @include font(16px, 28px, 300);
+  color: $white;
+  text-align: center;
+  letter-spacing: -0.005em;
+  opacity: 0.7;
+}

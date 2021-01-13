@@ -1,3 +1,14 @@
-h1 {
-  color: red;
-}
+@import "../sass/utils/fonts.scss";
+@import "../sass/utils/vars.scss";
+@import "../sass/utils/mixins.scss";
+@import "../sass/utils/colors.scss";
+@import "../sass/blocks/body.scss";
+@import "../sass/blocks/contacts.scss";
+@import "../sass/blocks/facts.scss";
+@import "../sass/blocks/form.scss";
+@import "../sass/blocks/header.scss";
+@import "../sass/blocks/nav.scss";
+@import "../sass/blocks/section-title.scss";
+@import "../sass/blocks/types.scss";
+@import "../sass/blocks/video.scss";
+@import "../sass/blocks/visually-hidden.scss";

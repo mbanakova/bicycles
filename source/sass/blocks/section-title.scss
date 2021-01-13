@@ -1,0 +1,10 @@
+.section-title {
+  @include font(30px, 30px, 600);
+  color: $dark;
+  text-align: center;
+  letter-spacing: -0.005em;
+
+  &--white {
+    color: $white;
+  }
+}

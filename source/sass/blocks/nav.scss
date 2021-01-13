@@ -1,0 +1,19 @@
+.nav__list {
+  @include ul();
+  border-bottom: 1px solid rgba($white, 0.2);
+}
+
+.nav__link {
+  @include a();
+  @include font(16px, 32px, 300);
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+    transition: $tr;
+  }
+}
+
+.nav__burger {
+  @include button();
+}

@@ -1,0 +1,13 @@
+.header {
+  color: $white;
+  background-image: url("../img/header-desk.jpg");
+}
+
+.header__title {
+  @include font(46px, 64px, 700);
+}
+
+.header__text {
+  @include font(20px, 32px, 300);
+  opacity: 0.8;
+}

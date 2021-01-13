@@ -1,0 +1,25 @@
+
+.form__text {
+  @include font(17px, 28px, 600);
+  text-align: center;
+  letter-spacing: -0.005em;
+}
+
+.form__input {
+  @include font(15px, 24px, 400);
+  color: $input;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+}
+
+.form__submit {
+  @include button();
+  background-color: $accent;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: $accent-hover;
+  }
+}

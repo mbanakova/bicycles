@@ -1,0 +1,21 @@
+.body {
+  @include font();
+  @include fields();
+  position: relative;
+  margin: 0 auto;
+  color: $black;
+  font-family: $font;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.body,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
