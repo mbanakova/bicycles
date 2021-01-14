@@ -107,26 +107,43 @@
   </main>
 
   <footer class="contacts" id="contacts">
-    <p class="section-title">Как нас найти?</p>
-    <p class="contacts__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-    <!-- <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616006086!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1610532166796!5m2!1sru!2sru"
-      width="600" height="450" allowfullscreen="" aria-hidden="false" tabindex="0">
-    </iframe> -->
-    <ul class="contacts__list">
-      <li class="contacts__item">
-        <svg class="contacts__svg" width="26" height="20" role="img" aria-label="Иконка-конверт">
-          <use xlink:href="img/sprite_auto.svg#icon-envelope"></use>
-        </svg>
-        <a class="contacts__link" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-      </li>
-      <li class="contacts__item">
-        <svg class="contacts__svg" width="22" height="24" role="img" aria-label="Иконка-трубка">
-          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
-        </svg>
-        <a class="contacts__link" href="tel:+749978468446">+7 (499) -784-684-46</a>
-      </li>
-    </ul>
+    <div class="contacts__container">
+      <div class="contacts__top">
+        <p class="section-title">Как нас найти?</p>
+        <p class="contacts__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+      </div>
+      <div class="contacts__location">
+        <iframe class="contacts__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616006086!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1610532166796!5m2!1sru!2sru"
+          width="957" height="530" allowfullscreen tabindex="0">
+        </iframe>
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/map-mob.webp, img/map-mob@2.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)"
+            srcset="img/map-tab.webp, img/map-tab@2.webp 2x">
+          <source type="image/webp" srcset="img/map-desk.webp, img/map-desk@2.webp 2x">
+          <source media="(max-width: 767px)" srcset="img/map-mob.png, img/map-mob@2.png 2x">
+          <source media="(max-width: 1023px)" srcset="img/map-tab.png, img/map-tab@2.png 2x">
+          <img class="contacts__image" src="img/map-desk.png" srcset="img/map-desk@2.png 2x" width="957" height="530"
+            alt="Магазин на карте">
+        </picture>
+      </div>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <svg class="contacts__svg" width="26" height="20" role="img" aria-label="Иконка-конверт">
+            <use xlink:href="img/sprite_auto.svg#icon-envelope"></use>
+          </svg>
+          <a class="contacts__link" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+        </li>
+        <li class="contacts__item">
+          <svg class="contacts__svg" width="22" height="24" role="img" aria-label="Иконка-трубка">
+            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+          </svg>
+          <a class="contacts__link" href="tel:+749978468446">+7 (499) -784-684-46</a>
+        </li>
+      </ul>
+    </div>
   </footer>
   <script>
     let body = document.querySelector('.body');

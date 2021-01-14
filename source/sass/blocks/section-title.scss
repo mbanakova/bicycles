@@ -1,10 +1,19 @@
 .section-title {
   @include font(30px, 30px, 600);
+  @include fields();
   color: $dark;
   text-align: center;
   letter-spacing: -0.005em;
 
   &--white {
     color: $white;
+  }
+
+  @media (max-width: $desktop) {
+    @include font(24px, 30px, 600);
+  }
+
+  @media (max-width: $tablet) {
+    @include font(18px, 30px, 600);
   }
 }
