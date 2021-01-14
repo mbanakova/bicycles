@@ -10,14 +10,14 @@
   margin-bottom: 16px;
   text-align: center;
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     @include font(18px, 28px, 600);
     color: $black;
     margin-top: 0;
     margin-bottom: 30px;
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     margin-bottom: 20px;
   }
 }
@@ -45,14 +45,14 @@
     transition: $tr;
   }
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     padding: 11px 20px 11px;
     border-radius: 4px;
     margin-left: 2px;
     margin-right: 2px;
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     padding: 13px 25px 9px;
     margin-left: 0;
     margin-right: 0;
@@ -69,13 +69,13 @@
     transition: $tr;
   }
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     border-radius: 4px;
     margin-left: 2px;
     margin-right: 2px;
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     margin-left: 0;
     margin-right: 0;
   }

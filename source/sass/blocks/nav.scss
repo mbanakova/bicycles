@@ -1,7 +1,7 @@
 .nav {
   position: relative;
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     &--opened {
       @include font(20px, 140%, 400);
       position: fixed;
@@ -24,7 +24,7 @@
     }
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     &--nojs {
       margin-left: -16px;
     }
@@ -38,14 +38,14 @@
   justify-content: space-between;
   align-items: center;
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     flex-direction: column;
     align-items: flex-start;
   }
 }
 
 .nav--opened .nav__list {
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     align-items: stretch;
     justify-content: center;
     margin: auto 0;
@@ -53,7 +53,7 @@
 }
 
 .nav--opened .nav__item {
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     margin-bottom: 30px;
 
     &:last-of-type {
@@ -73,13 +73,13 @@
     transition: $tr;
   }
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     display: none;
   }
 }
 
 .nav--opened .nav__link {
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     @include font(20px, 28px, 400);
     position: relative;
     display: block;
@@ -106,7 +106,7 @@
   display: none;
   position: relative;
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     @include button();
     display: block;
     position: absolute;
@@ -123,8 +123,8 @@
       left: 50%;
       background-color: $black;
       box-shadow:
-      0 6px 0 0 $black,
-      0 12px 0 0 $black;
+        0 6px 0 0 $black,
+        0 12px 0 0 $black;
       transform: translateX(-50%);
     }
 
@@ -160,7 +160,7 @@
     }
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     right: -16px;
 
     &--opened {

@@ -7,11 +7,11 @@
   background-repeat: no-repeat;
   background-position: center center;
 
-  @media(min-resolution: $extra) {
+  @media (min-resolution: $extra) {
     background-image: url("../img/header-desk@2.jpg");
   }
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     background-image: url("../img/header-tab.jpg");
     background-size: auto 341px;
     background-position: center top;
@@ -19,7 +19,7 @@
     margin-bottom: 70px;
     min-height: 680px;
 
-    @media(min-resolution: $extra) {
+    @media (min-resolution: $extra) {
       background-image: url("../img/header-tab@2.jpg");
     }
 
@@ -28,11 +28,11 @@
     }
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     background-image: url("../img/header-mob.jpg");
     background-size: auto 390px;
 
-    @media(min-resolution: $extra) {
+    @media (min-resolution: $extra) {
       background-image: url("../img/header-mob@2.jpg");
     }
   }
@@ -41,7 +41,7 @@
 .header__nav {
   margin-bottom: 255px;
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     margin-bottom: 0;
   }
 }
@@ -51,12 +51,12 @@
   margin: 0 auto;
   padding: 0 20px;
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     width: 100%;
     padding: 0 21px;
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     padding: 0 16px;
   }
 }
@@ -66,7 +66,7 @@
   justify-content: space-between;
   align-items: stretch;
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -77,13 +77,13 @@
   @include font(46px, 64px, 700);
   @include fields();
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     @include font(30px, 42px, 700);
     width: 70%;
     margin-bottom: 20px;
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     width: 90%;
   }
 }
@@ -93,12 +93,12 @@
   @include fields();
   opacity: 0.8;
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     @include font(18px, 32px, 300);
     width: 55%;
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     width: 100%;
   }
 }
@@ -109,7 +109,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     width: 100%;
     margin-top: 25px;
     min-height: 315px;
@@ -119,18 +119,18 @@
     text-align: center;
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     min-height: 363px;
   }
 }
 
 .header__logo-link {
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     align-self: flex-start;
     margin-bottom: 80px;
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     margin-bottom: 66px;
   }
 }
@@ -138,11 +138,11 @@
 .header__form {
   width: 327px;
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     width: 45%;
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     width: 100%;
   }
 }
