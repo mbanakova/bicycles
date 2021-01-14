@@ -1,16 +1,61 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
 
 .form__text {
   @include font(17px, 28px, 600);
+  @include fields();
+  margin-top: 5px;
+  margin-bottom: 16px;
   text-align: center;
-  letter-spacing: -0.005em;
+
+  @media(max-width: $desktop) {
+    @include font(18px, 28px, 600);
+    color: $black;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  @media(max-width: $tablet) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__input {
   @include font(15px, 24px, 400);
+  margin-bottom: 20px;
+  padding: 13px 29px 10px;
   color: $input;
+  border: 1px solid $input-border;
+  border-radius: 6px;
+  letter-spacing: 0.015em;
 
   &::placeholder {
     opacity: 0.5;
+  }
+
+  &:hover {
+    border: 1px solid $accent-hover;
+    transition: $tr;
+  }
+
+  &:focus {
+    border: 1px solid $accent;
+    transition: $tr;
+  }
+
+  @media(max-width: $desktop) {
+    padding: 11px 20px 11px;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  @media(max-width: $tablet) {
+    padding: 13px 25px 9px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -21,5 +66,17 @@
 
   &:hover {
     background-color: $accent-hover;
+    transition: $tr;
+  }
+
+  @media(max-width: $desktop) {
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  @media(max-width: $tablet) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

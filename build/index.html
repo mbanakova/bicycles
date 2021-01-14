@@ -13,10 +13,10 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="body">
-  <header class="header">
+<body class="body body--nojs">
+  <header class="header header--nojs">
     <div class="header__container">
-      <nav class="header__nav nav">
+      <nav class="header__nav nav nav--opened nav--nojs">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="#facts">О нас</a>
@@ -31,7 +31,7 @@
             <a class="nav__link" href="#contacts">Контакты</a>
           </li>
         </ul>
-        <button class="nav__burger" aria-label="Бургер-меню"></button>
+        <button class="nav__burger nav__burger--opened" aria-label="Бургер-меню"></button>
       </nav>
 
       <div class="header__wrapper">
@@ -45,7 +45,7 @@
           <p class="header__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
         </div>
 
-        <form class="header__form form" action="post">
+        <form class="header__form form" action="https://echo.htmlacademy.ru" method="post">
           <p class="form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <input class="form__input" type="text" name="user-name" id="user-name" placeholder="Введите Ваше Имя">
           <label class="visually-hidden" for="user-name">Имя пользователя</label>
@@ -104,8 +104,10 @@
   <footer class="contacts" id="contacts">
     <p class="section-title">Как нас найти?</p>
     <p class="contacts__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616006086!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1610532166796!5m2!1sru!2sru" width="600" height="450" allowfullscreen="" aria-hidden="false" tabindex="0">
-    </iframe>
+    <!-- <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616006086!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1610532166796!5m2!1sru!2sru"
+      width="600" height="450" allowfullscreen="" aria-hidden="false" tabindex="0">
+    </iframe> -->
     <ul class="contacts__list">
       <li class="contacts__item">
         <svg class="contacts__svg" width="26" height="20" role="img" aria-label="Иконка-конверт">
@@ -121,6 +123,31 @@
       </li>
     </ul>
   </footer>
+  <script>
+    let body = document.querySelector('.body');
+    let header = document.querySelector('.header');
+    let mainNav = document.querySelector('.nav');
+    let burger = document.querySelector('.nav__burger');
+    let links = document.querySelectorAll('.nav__link');
+
+    body.classList.remove('body--nojs');
+    header.classList.remove('header--nojs');
+    mainNav.classList.remove('nav--nojs');
+    burger.classList.remove('nav__burger--opened');
+    mainNav.classList.remove('nav--opened');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('nav__burger--opened');
+      mainNav.classList.toggle('nav--opened');
+    })
+
+    links.forEach(elem => {
+      elem.addEventListener('click', () => {
+        burger.classList.toggle('nav__burger--opened');
+        mainNav.classList.toggle('nav--opened');
+      })
+    })
+  </script>
 </body>
 
 </html>

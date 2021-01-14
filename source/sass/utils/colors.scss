@@ -2,10 +2,12 @@ $black: #000000;
 $white: #ffffff;
 
 $accent: #0ad9c6;
-$accent-hover: rgba($accent, 0.8);
+$accent-hover: darken($accent, 10%);
 
 $input: #1c1c1c;
+$input-border: #c9ccd4;
 $dark: #1f1f1f;
 $bg-dark: #131314;
 $bg-light: #f6f7f9;
 $nav: #f6f6f6;
+$medium-grey: #48494d;

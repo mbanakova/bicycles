@@ -1,19 +1,179 @@
+.nav {
+  position: relative;
+
+  @media(max-width: $desktop) {
+    &--opened {
+      @include font(20px, 140%, 400);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: $white;
+      color: $medium-grey;
+    }
+
+    &--nojs {
+      position: static;
+      margin-left: -21px;
+    }
+  }
+
+  @media(max-width: $tablet) {
+    &--nojs {
+      margin-left: -16px;
+    }
+  }
+}
+
 .nav__list {
   @include ul();
   border-bottom: 1px solid rgba($white, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media(max-width: $desktop) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.nav--opened .nav__list {
+  @media(max-width: $desktop) {
+    align-items: stretch;
+    justify-content: center;
+    margin: auto 0;
+  }
+}
+
+.nav--opened .nav__item {
+  @media(max-width: $desktop) {
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .nav__link {
   @include a();
   @include font(16px, 32px, 300);
+  padding: 21px 23px 9px;
   opacity: 0.7;
 
   &:hover {
     opacity: 1;
     transition: $tr;
   }
+
+  @media(max-width: $desktop) {
+    display: none;
+  }
+}
+
+.nav--opened .nav__link {
+  @media(max-width: $desktop) {
+    @include font(20px, 28px, 400);
+    position: relative;
+    display: block;
+    background: $nav;
+    text-align: left;
+    padding: 16px 70px 16px 16px;
+    opacity: 1;
+    width: 100%;
+
+    &::after {
+      @include pseudo();
+      right: 22px;
+      top: 50%;
+      width: 9px;
+      height: 9px;
+      border-right: 2px solid rgba($dark, 0.5);
+      border-bottom: 2px solid rgba($dark, 0.5);
+      transform: rotate(-45deg) translateY(-50%);
+    }
+  }
 }
 
 .nav__burger {
-  @include button();
+  display: none;
+  position: relative;
+
+  @media(max-width: $desktop) {
+    @include button();
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -21px;
+    width: 50px;
+    height: 50px;
+
+    &::before {
+      @include pseudo();
+      width: 22px;
+      height: 1px;
+      top: 18px;
+      left: 50%;
+      background-color: $black;
+      box-shadow:
+      0 6px 0 0 $black,
+      0 12px 0 0 $black;
+      transform: translateX(-50%);
+    }
+
+    &--opened {
+      background-color: $white;
+      right: 0;
+
+      &:hover {
+        background-color: $white;
+        transition: $tr;
+      }
+
+      &::before {
+        @include pseudo();
+        width: 32px;
+        height: 2px;
+        top: 50%;
+        left: 50%;
+        background-color: rgba($black, 0.2);
+        transform: translate(-50%) rotate(45deg);
+        box-shadow: none;
+      }
+
+      &::after {
+        @include pseudo();
+        width: 2px;
+        height: 32px;
+        top: 50%;
+        left: 50%;
+        background-color: rgba($black, 0.2);
+        transform: translateY(-45%) rotate(45deg);
+      }
+    }
+  }
+
+  @media(max-width: $tablet) {
+    right: -16px;
+
+    &--opened {
+      right: 0;
+    }
+  }
+}
+
+.nav--opened .nav__burger {
+  order: -1;
+  align-self: flex-end;
+}
+
+.nav--nojs .nav__burger {
+  display: none;
 }
