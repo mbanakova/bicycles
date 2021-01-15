@@ -54,14 +54,17 @@
 .contacts__location {
   position: relative;
   margin-bottom: 32px;
+  height: 530px;
 
   @media (max-width: $desktop) {
     align-self: stretch;
     margin-bottom: 14px;
+    height: 545px;
   }
 
   @media (max-width: $tablet) {
     margin-bottom: 23px;
+    height: 250px;
   }
 }
 
@@ -85,6 +88,16 @@
   top: 0;
   left: 0;
   z-index: -1;
+  height: 530px;
+  object-fit: cover;
+
+  @media (max-width: $desktop) {
+    height: 545px;
+  }
+
+  @media (max-width: $tablet) {
+    height: 250px;
+  }
 }
 
 .contacts__list {

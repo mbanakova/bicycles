@@ -15,6 +15,16 @@
 
 <body class="body body--nojs">
   <header class="header header--nojs">
+    <picture>
+      <source type="image/webp" media="(max-width: 767px)" srcset="img/header-mob.webp, img/header-mob@2.webp 2x">
+      <source type="image/webp" media="(max-width: 1023px)" srcset="img/header-tab.webp, img/header-tab@2.webp 2x">
+      <source type="image/webp" srcset="img/header-desk.webp, img/header-desk@2.webp 2x">
+      <source media="(max-width: 767px)" srcset="img/header-mob.jpg, img/header-mob@2.jpg 2x">
+      <source media="(max-width: 1023px)" srcset="img/header-tab.jpg, img/header-tab@2.png 2x">
+      <img class="header__img" src="img/header-desk.jpg" srcset="img/header-desk@2.jpg 2x" width="1440" height="825"
+        alt="Велосипед на тёмном фоне">
+    </picture>
+
     <div class="header__container">
       <nav class="header__nav nav nav--opened nav--nojs">
         <ul class="nav__list">
@@ -95,8 +105,12 @@
       <h2 class="section-title section-title--white">Видео про велосипеды</h2>
       <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
       <div class="video__clip">
-        <img class="video__img" src="img/video.png" srcset="img/video@2.png 2x" width="929" height="522"
-          alt="Видеоплеер">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/video-mob.png, img/video-mob@2.png 2x">
+          <source media="(max-width: 1023px)" srcset="img/video-tab.png, img/video-tab@2.png 2x">
+          <img class="video__img" src="img/video-desk.png" srcset="img/video-desk@2.png 2x" width="929" height="522"
+            alt="Видеоплеер">
+        </picture>
         <button class="video__play" type="button">
           <svg class="video__svg" width="14" height="19" role="img" aria-label="Кнопка play">
             <use xlink:href="img/sprite_auto.svg#icon-play"></use>
@@ -118,10 +132,8 @@
           width="957" height="530" allowfullscreen tabindex="0">
         </iframe>
         <picture>
-          <source type="image/webp" media="(max-width: 767px)"
-            srcset="img/map-mob.webp, img/map-mob@2.webp 2x">
-          <source type="image/webp" media="(max-width: 1023px)"
-            srcset="img/map-tab.webp, img/map-tab@2.webp 2x">
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/map-mob.webp, img/map-mob@2.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="img/map-tab.webp, img/map-tab@2.webp 2x">
           <source type="image/webp" srcset="img/map-desk.webp, img/map-desk@2.webp 2x">
           <source media="(max-width: 767px)" srcset="img/map-mob.png, img/map-mob@2.png 2x">
           <source media="(max-width: 1023px)" srcset="img/map-tab.png, img/map-tab@2.png 2x">
