@@ -2,12 +2,29 @@
   background: linear-gradient(to top, $white, $white 100px, $bg-dark 100px);
   margin-bottom: 151px;
   padding-top: 120px;
+
+  @media (max-width: $desktop) {
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-top: 84px;
+  }
 }
 
 .video__container {
   width: 969px;
   margin: 0 auto;
   padding: 0 20px;
+
+  @media (max-width: $desktop) {
+    width: 70%;
+  }
+
+  @media (max-width: $tablet) {
+    width: 90%;
+    padding: 0 16px;
+  }
 }
 
 .video__text {
@@ -18,6 +35,15 @@
   text-align: center;
   letter-spacing: -0.005em;
   opacity: 0.7;
+
+  @media (max-width: $desktop) {
+    width: 429px;
+  }
+
+  @media (max-width: $tablet) {
+    width: auto;
+    margin-bottom: 50px;
+  }
 }
 
 .video__clip {
@@ -41,8 +67,24 @@
     background-color: $accent-hover;
     transition: $tr;
   }
+
+
+  @media (max-width: $desktop) {
+    width: 18%;
+    height: 32%;
+  }
+
+  @media (max-width: $tablet) {
+    width: 65px;
+    height: 65px;
+  }
 }
 
 .video__svg {
   margin-left: 5px;
+
+  @media (max-width: $desktop) {
+    width: 25px;
+    height: 18px;
+  }
 }

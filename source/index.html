@@ -88,18 +88,36 @@
         <h2 class="section-title">Виды велосипедов</h2>
         <ul class="types__list">
           <li class="types__item types__item--road">
-            <img class="types__img" src="img/bike-road-desk.png" srcset="img/bike-road-desk@2.png 2x" width="342"
-              height="503" alt="Велосипед у стены">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/bike-road-tab.webp, img/bike-road-tab@2.webp 2x">
+              <source type="image/webp" srcset="img/bike-road-desk.webp, img/bike-road-desk@2.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/bike-road-tab.png, img/bike-road-tab@2.png 2x">
+              <img class="types__img" src="img/bike-road-desk.png" srcset="img/bike-road-desk@2.png 2x" width="342"
+                height="503" alt="Велосипед у стены">
+            </picture>
             <p class="types__description">Дорожный велосипед</p>
           </li>
           <li class="types__item types__item--mount">
-            <img class="types__img" src="img/bike-mount-desk.png" srcset="img/bike-mount-desk@2.png 2x" width="342"
-              height="566" alt="Велосипед на горе">
+            <picture>
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/bike-mount-tab.webp, img/bike-mount-tab@2.webp 2x">
+            <source type="image/webp" srcset="img/bike-mount-desk.webp, img/bike-mount-desk@2.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/bike-mount-tab.png, img/bike-mount-tab@2.png 2x">
+              <img class="types__img" src="img/bike-mount-desk.png" srcset="img/bike-mount-desk@2.png 2x" width="342"
+                height="566" alt="Велосипед на горе">
+            </picture>
             <p class="types__description">Горный велосипед</p>
           </li>
           <li class="types__item types__item--kid">
-            <img class="types__img types__img--upper" src="img/bike-kid-desk.png" srcset="img/bike-kid-desk@2.png 2x"
-              width="342" height="512" alt="Розовый детский велосипед">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/bike-kid-tab.webp, img/bike-kid-tab@2.webp 2x">
+              <source type="image/webp" srcset="img/bike-kid-desk.webp, img/bike-kid-desk@2.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/bike-kid-tab.png, img/bike-kid-tab@2.png 2x">
+              <img class="types__img types__img--upper" src="img/bike-kid-desk.png" srcset="img/bike-kid-desk@2.png 2x"
+                width="342" height="512" alt="Розовый детский велосипед">
+            </picture>
             <p class="types__description">Детский велосипед</p>
           </li>
         </ul>
@@ -211,10 +229,10 @@
     }
 
     if (storageName && storagePhone) {
-        userName.value = storageName;
-        userPhone.value = storagePhone;
+      userName.value = storageName;
+      userPhone.value = storagePhone;
     } else {
-        userName.focus();
+      userName.focus();
     }
 
     form.addEventListener('submit', (evt) => {
@@ -229,13 +247,11 @@
             localStorage.setItem('user', userName.value);
             localStorage.setItem('phone', userPhone.value);
           }
-          if (elem.value) {
+          if (userName.value && userPhone.value) {
             submit.textContent = 'Ожидайте звонка!';
           }
         }
       });
-      console.log(localStorage.user);
-      console.log(localStorage.phone);
     });
 
     document.addEventListener('click', () => {
