@@ -10,10 +10,10 @@
   }
 
   @media (max-width: $desktop) {
-    @include font(24px, 30px, 600);
+    @include font(24px, 41px, 600);
   }
 
   @media (max-width: $tablet) {
-    @include font(18px, 30px, 600);
+    // @include font(18px, 30px, 600);
   }
 }

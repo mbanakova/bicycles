@@ -1,13 +1,84 @@
 .types {
   background-color: $bg-light;
+  padding-top: 141px;
+  padding-bottom: 147px;
+}
+
+.types__container {
+  width: 1201px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .types__list {
   @include ul();
+  margin-top: 71px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.types__item {
+  position: relative;
+
+  &--road {
+    &::after {
+      @include pseudo();
+      width: 180px;
+      height: 180px;
+      top: 156px;
+      left: -60px;
+      border: 27px solid $accent;
+      border-radius: 50%;
+    }
+  }
+
+  &--mount {
+    margin-top: 19px;
+
+    &::after,
+    &::before {
+      @include pseudo();
+      width: 47px;
+      height: 47px;
+      border: 8px solid $accent;
+    }
+
+    &::before {
+      top: -18px;
+      left: -18px;
+    }
+
+    &::after {
+      right: -18px;
+      bottom: 24px;
+    }
+  }
+
+  &--kid {
+    &::after {
+      @include pseudo();
+      width: 95px;
+      height: 95px;
+      top: -32px;
+      right: -36px;
+      border: 17px solid $accent;
+      border-radius: 50%;
+    }
+  }
 }
 
 .types__description {
   @include font(22px, 34px, 600);
+  @include fields();
   text-align: center;
   letter-spacing: -0.5px;
+}
+
+.types__img {
+  border-radius: 10px;
+  position: relative;
+
+  &--upper {
+    z-index: 1;
+  }
 }
