@@ -1,7 +1,7 @@
 .types {
   background-color: $bg-light;
-  padding-top: 141px;
-  padding-bottom: 147px;
+  padding-top: 149px;
+  padding-bottom: 149px;
 
   @media (max-width: $desktop) {
     padding-top: 50px;
@@ -14,25 +14,10 @@
   }
 }
 
-.types__container {
-  width: 1201px;
-  margin: 0 auto;
-  padding: 0 40px;
-
-  @media (max-width: $desktop) {
-    width: 664px;
-    padding: 0 37px;
-  }
-
-  @media (max-width: $tablet) {
-    width: 100%;
-    padding: 0 25px;
-  }
-}
-
 .types__list {
   @include ul();
-  margin-top: 71px;
+  margin: 50px auto 0;
+  max-width: 92%;
   display: flex;
   justify-content: space-between;
 
@@ -50,8 +35,16 @@
 
 .types__item {
   position: relative;
+  width: 33.33%;
+  margin-right: 5%;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 
   &--road {
+    margin-top: 10px;
+
     &::after {
       @include pseudo();
       width: 180px;
@@ -64,7 +57,7 @@
   }
 
   &--mount {
-    margin-top: 19px;
+    margin-top: 40px;
 
     &::after,
     &::before {
@@ -80,8 +73,8 @@
     }
 
     &::after {
-      right: -18px;
-      bottom: 40px;
+      right: -22px;
+      bottom: 30px;
     }
   }
 
@@ -148,7 +141,8 @@
 .types__img {
   border-radius: 10px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
+  width: auto;
 
   &--upper {
     z-index: 1;

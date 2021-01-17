@@ -1,6 +1,6 @@
 .video {
-  background: linear-gradient(to top, $white, $white 100px, $bg-dark 100px);
-  margin-bottom: 151px;
+  background: linear-gradient(to top, $white, $white 106px, $bg-dark 106px);
+  margin-bottom: 144px;
   padding-top: 120px;
 
   @media (max-width: $desktop) {
@@ -9,21 +9,6 @@
 
   @media (max-width: $tablet) {
     margin-top: 84px;
-  }
-}
-
-.video__container {
-  width: 969px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  @media (max-width: $desktop) {
-    width: 70%;
-  }
-
-  @media (max-width: $tablet) {
-    width: 90%;
-    padding: 0 16px;
   }
 }
 
@@ -48,14 +33,19 @@
 
 .video__clip {
   position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 76%;
 }
 
 .video__play {
   @include button();
   position: absolute;
-  top: 50%;
+  top: 49%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -49%);
   border-radius: 50%;
   display: flex;
   justify-content: center;

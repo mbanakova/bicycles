@@ -1,29 +1,15 @@
 .facts {
-  margin-bottom: 131px;
+  margin-bottom: 154px;
 
   @media (max-width: $desktop) {
     margin-bottom: 70px;
   }
 }
 
-.facts__container {
-  width: 1200px;
-  padding: 0 32px;
-  margin: 0 auto;
-
-  @media (max-width: $desktop) {
-    width: 100%;
-    padding: 0 106px;
-  }
-
-  @media (max-width: $tablet) {
-    padding: 0 28px;
-  }
-}
-
 .facts__list {
   @include ul();
-  margin-top: 50px;
+  margin: 50px auto 0;
+  max-width: 95%;
   display: flex;
   justify-content: space-between;
   counter-reset: myCounter;
@@ -40,11 +26,16 @@
 
 .facts__item {
   @include font(22px, 34px, 400);
-  padding-top: 50px;
-  width: 263px;
+  padding-top: 52px;
+  margin-right: 38px;
+  width: 25%;
   position: relative;
   text-align: center;
   letter-spacing: -0.5px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 
   &::before {
     @include font(28px, 38px, 700);
@@ -61,6 +52,7 @@
 
   @media (max-width: $desktop) {
     margin-bottom: 20px;
+    margin-right: 0;
     width: 40%;
 
     &:nth-of-type(3n):not(:last-of-type) {
