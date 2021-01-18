@@ -100,7 +100,7 @@
   display: none;
   position: relative;
 
-  @media(max-width: $desktop) {
+  @media (max-width: $desktop) {
     @include button();
     display: block;
     position: absolute;
@@ -117,8 +117,8 @@
       left: 50%;
       background-color: $black;
       box-shadow:
-      0 6px 0 0 $black,
-      0 12px 0 0 $black;
+        0 6px 0 0 $black,
+        0 12px 0 0 $black;
       transform: translateX(-50%);
     }
 
@@ -154,7 +154,7 @@
     }
   }
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     right: -14px;
 
     &--opened {
