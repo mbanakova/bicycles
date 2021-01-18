@@ -128,7 +128,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 94%;
+    width: max-content;
 
     &:nth-of-type(n):not(:last-of-type) {
       margin-bottom: 41px;
@@ -140,11 +140,11 @@
     }
 
     &--road::after {
-      left: -8%;
+      left: -9%;
     }
 
     &--kid::after {
-      right: -4%;
+      right: -5%;
     }
   }
 }
