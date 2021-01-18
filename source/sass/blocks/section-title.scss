@@ -14,5 +14,9 @@
 
   @media (max-width: $desktop) {
     @include font(24px, 41px, 600);
+
+    &--white {
+      padding-right: 0;
+    }
   }
 }

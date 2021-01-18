@@ -8,14 +8,16 @@
 
 .facts__list {
   @include ul();
-  margin: 50px auto 0;
+  margin: 49px auto 0;
   max-width: 95%;
   display: flex;
   justify-content: space-between;
   counter-reset: myCounter;
 
   @media (max-width: $desktop) {
+    margin-top: 30px;
     flex-wrap: wrap;
+    max-width: 79%;
   }
 
   @media (max-width: $tablet) {
@@ -51,16 +53,12 @@
   }
 
   @media (max-width: $desktop) {
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     margin-right: 0;
-    width: 40%;
+    width: 47%;
 
     &:nth-of-type(3n):not(:last-of-type) {
       margin-bottom: 0;
-    }
-
-    &:nth-of-type(2n):not(:last-of-type) {
-      margin-bottom: 20px;
     }
 
     &:last-of-type {

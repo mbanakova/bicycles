@@ -1,11 +1,11 @@
 .header {
   position: relative;
   min-height: 825px;
-  margin-bottom: 150px;
+  margin-bottom: 151px;
   color: $white;
 
   @media (max-width: $desktop) {
-    margin-bottom: 70px;
+    margin-bottom: 69px;
     min-height: 680px;
 
     &--nojs {
@@ -45,6 +45,7 @@
 
   @media (max-width: $desktop) {
     margin-bottom: 0;
+    max-width: 100%;
   }
 }
 
@@ -57,7 +58,7 @@
   align-items: stretch;
 
   @media (max-width: $desktop) {
-    width: 100%;
+    max-width: 100%;
     flex-direction: column;
     align-items: center;
   }
@@ -118,6 +119,7 @@
   @media (max-width: $desktop) {
     align-self: flex-start;
     margin-bottom: 80px;
+    margin-left: 22px;
   }
 
   @media (max-width: $tablet) {
@@ -129,7 +131,7 @@
   width: 327px;
 
   @media (max-width: $desktop) {
-    width: 45%;
+    width: 43%;
   }
 
   @media (max-width: $tablet) {

@@ -35,8 +35,8 @@
 
 .types__item {
   position: relative;
-  width: 33.33%;
-  margin-right: 5%;
+  width: 33%;
+  margin-right: 47px;
 
   &:last-of-type {
     margin-right: 0;
@@ -50,7 +50,7 @@
       width: 180px;
       height: 180px;
       top: 156px;
-      left: -60px;
+      left: -59px;
       border: 27px solid $accent;
       border-radius: 50%;
     }
@@ -68,13 +68,13 @@
     }
 
     &::before {
-      top: -18px;
-      left: -18px;
+      top: -19px;
+      left: -17px;
     }
 
     &::after {
       right: -22px;
-      bottom: 30px;
+      bottom: 31px;
     }
   }
 
@@ -91,6 +91,7 @@
   }
 
   @media (max-width: $desktop) {
+    width: 42%;
     margin: 0;
 
     &:nth-of-type(n):not(:last-of-type) {
@@ -112,11 +113,11 @@
       }
     }
 
-    &--road::before {
+    &--kid::after {
       width: 68px;
       height: 68px;
       top: -20px;
-      border-width: 15px;
+      border-width: 13px;
       right: -25px;
     }
   }
@@ -141,7 +142,7 @@
 .types__img {
   border-radius: 10px;
   position: relative;
-  margin-bottom: 11px;
+  margin-bottom: 12px;
   width: auto;
 
   &--upper {
@@ -149,7 +150,6 @@
   }
 
   @media (max-width: $desktop) {
-    width: 270px;
     height: 300px;
   }
 }
