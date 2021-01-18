@@ -1,4 +1,4 @@
-.form {
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,7 +23,7 @@
   }
 }
 
-.form__input {
+input {
   @include font(15px, 24px, 400);
   margin-bottom: 20px;
   padding: 13px 29px 10px;
@@ -60,7 +60,7 @@
   }
 }
 
-.form__submit {
+form button {
   @include button();
   background-color: $accent;
   border-radius: 6px;
