@@ -12,6 +12,10 @@
       background-position: center 100vh;
     }
   }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 71px;
+  }
 }
 
 .header__img {
@@ -123,7 +127,7 @@
   }
 
   @media (max-width: $tablet) {
-    margin-bottom: 66px;
+    margin: 0 0 66px 2px;
   }
 }
 

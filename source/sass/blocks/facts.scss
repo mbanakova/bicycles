@@ -4,6 +4,10 @@
   @media (max-width: $desktop) {
     margin-bottom: 70px;
   }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 81px;
+  }
 }
 
 .facts__list {
@@ -21,8 +25,11 @@
   }
 
   @media (max-width: $tablet) {
+    margin-top: 29px;
     flex-wrap: nowrap;
     flex-direction: column;
+    justify-content: flex-start;
+    max-width: 90%;
   }
 }
 
@@ -68,8 +75,21 @@
 
   @media (max-width: $tablet) {
     @include font(18px, 34px, 400);
+    padding-top: 56px;
     width: 100%;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+    min-height: 125px;
+
+    &::before {
+      @include font(28px, 28px, 700);
+      top: 15px;
+    }
+
+    &:first-of-type {
+      &::before {
+        top: 5px;
+      }
+    }
 
     &:nth-of-type(3n):not(:last-of-type),
     &:nth-of-type(2n):not(:last-of-type) {

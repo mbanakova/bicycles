@@ -30,6 +30,7 @@
   @media (max-width: $tablet) {
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
   }
 }
 
@@ -123,11 +124,27 @@
   }
 
   @media (max-width: $tablet) {
-    margin: 0;
-    margin-bottom: 40px;
+    margin: 0 auto 412px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94%;
+
+    &:nth-of-type(n):not(:last-of-type) {
+      margin-bottom: 41px;
+    }
 
     &:last-of-type {
       margin-bottom: 0;
+      margin-left: 0;
+    }
+
+    &--road::after {
+      left: -8%;
+    }
+
+    &--kid::after {
+      right: -4%;
     }
   }
 }
@@ -137,6 +154,10 @@
   @include fields();
   text-align: center;
   letter-spacing: -0.5px;
+
+  @media (max-width: $tablet) {
+    margin-right: 2px;
+  }
 }
 
 .types__img {
@@ -150,6 +171,10 @@
   }
 
   @media (max-width: $desktop) {
-    height: 300px;
+    width: 100%;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 13px;
   }
 }

@@ -5,12 +5,14 @@
 
   @media (max-width: $desktop) {
     background: linear-gradient(to top, $white, $white 94px, $bg-dark 94px);
-    margin-bottom: 55px;
+    margin-bottom: 56px;
     padding-top: 64px;
   }
 
   @media (max-width: $tablet) {
-    margin-top: 84px;
+    background: linear-gradient(to top, $white, $white 56px, $bg-dark 56px);
+    padding-top: 79px;
+    margin-bottom: 63px;
   }
 }
 
@@ -30,7 +32,7 @@
 
   @media (max-width: $tablet) {
     width: auto;
-    margin-bottom: 50px;
+    margin-bottom: 53px;
   }
 }
 
@@ -44,6 +46,10 @@
 
   @media (max-width: $desktop) {
     max-width: 72%;
+  }
+
+  @media (max-width: $tablet) {
+    max-width: 98%;
   }
 }
 
@@ -74,6 +80,7 @@
   @media (max-width: $tablet) {
     width: 65px;
     height: 65px;
+    top: 47%;
   }
 }
 

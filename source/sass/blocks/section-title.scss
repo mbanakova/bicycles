@@ -19,4 +19,16 @@
       padding-right: 0;
     }
   }
+
+  @media (max-width: $tablet) {
+    max-width: 100%;
+
+    &--white {
+      margin-right: 12px;
+    }
+
+    &--contacts-mob {
+      @include font(18px, 30px, 600);
+    }
+  }
 }
