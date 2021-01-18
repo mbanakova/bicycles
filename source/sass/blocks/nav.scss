@@ -20,13 +20,7 @@
 
     &--nojs {
       position: static;
-      margin-left: -21px;
-    }
-  }
-
-  @media (max-width: $tablet) {
-    &--nojs {
-      margin-left: -16px;
+      width: 100vw;
     }
   }
 }
