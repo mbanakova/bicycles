@@ -15,6 +15,7 @@ var svgstore = require('gulp-svgstore');
 var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
 var del = require('del');
+// var babel = require('gulp-babel');
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
@@ -28,6 +29,14 @@ gulp.task('css', function () {
       .pipe(gulp.dest('build/css'))
       .pipe(server.stream());
 });
+
+// gulp.task('js', function () {
+//   gulp.src('source/js/*.js')
+//       .pipe(babel({
+//         presets: ['@babel/env']
+//       }))
+//       .pipe(gulp.dest('build'));
+// });
 
 gulp.task('server', function () {
   server.init({

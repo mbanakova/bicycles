@@ -57,11 +57,9 @@
 
         <form class="header__form" action="https://echo.htmlacademy.ru" method="post">
           <p class="form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-          <input type="text" name="user-name" id="user-name" placeholder="Введите Ваше Имя"
-            required>
+          <input type="text" name="user-name" id="user-name" placeholder="Введите Ваше Имя" required>
           <label class="visually-hidden" for="user-name">Имя пользователя</label>
-          <input type="text" name="user-phone" id="user-phone"
-            placeholder="Введите Ваш номер телефона" required>
+          <input type="text" name="user-phone" id="user-phone" placeholder="Введите Ваш номер телефона" required>
           <label class="visually-hidden" for="user-phone">Контактный телефон</label>
           <button type="submit">Подобрать велосипед мечты</button>
         </form>
@@ -183,83 +181,7 @@
     </div>
   </footer>
 
-  <script>
-    let body = document.querySelector('.body');
-    let header = document.querySelector('.header');
-    let mainNav = document.querySelector('.nav');
-    let burger = document.querySelector('.nav__burger');
-    let links = document.querySelectorAll('.nav__link');
-    let form = document.querySelector('form')
-    let inputs = document.querySelectorAll('form input');
-    let userName = document.querySelector('#user-name');
-    let userPhone = document.querySelector('#user-phone');
-    let submit = document.querySelector('form button');
-    let isStorageSupport = true;
-    let storageName = '';
-    let storagePhone = '';
-    let modal = document.querySelector('.modal');
-
-    body.classList.remove('body--nojs');
-    header.classList.remove('header--nojs');
-    mainNav.classList.remove('nav--nojs');
-    burger.classList.remove('nav__burger--opened');
-    mainNav.classList.remove('nav--opened');
-
-    burger.addEventListener('click', () => {
-      burger.classList.toggle('nav__burger--opened');
-      mainNav.classList.toggle('nav--opened');
-    })
-
-    links.forEach(elem => {
-      elem.addEventListener('click', () => {
-        burger.classList.toggle('nav__burger--opened');
-        mainNav.classList.toggle('nav--opened');
-      })
-    })
-
-    inputs.forEach(elem => {
-      elem.removeAttribute('required');
-    });
-
-    try {
-      storageName = localStorage.getItem('user');
-      storagePhone = localStorage.getItem('phone');
-    } catch (err) {
-      isStorageSupport = false;
-    }
-
-    if (storageName && storagePhone) {
-      userName.value = storageName;
-      userPhone.value = storagePhone;
-    } else {
-      userName.focus();
-    }
-
-    form.addEventListener('submit', (evt) => {
-      evt.preventDefault();
-      inputs.forEach(elem => {
-        if (!elem.value) {
-          elem.classList.remove('error');
-          elem.offsetWidth = elem.offsetWidth;
-          elem.classList.add('error');
-        } else {
-          if (isStorageSupport) {
-            localStorage.setItem('user', userName.value);
-            localStorage.setItem('phone', userPhone.value);
-          }
-          if (userName.value && userPhone.value) {
-            submit.textContent = 'Ожидайте звонка!';
-          }
-        }
-      });
-    });
-
-    document.addEventListener('click', () => {
-      inputs.forEach(elem => {
-        elem.classList.remove('error');
-      });
-      submit.textContent = 'Подобрать велосипед мечты';
-    })
-  </script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
