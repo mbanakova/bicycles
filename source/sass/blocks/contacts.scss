@@ -1,8 +1,8 @@
 .contacts {
-  padding-bottom: 98px;
+  padding-bottom: 86px;
 
   @media (max-width: $desktop) {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
 
   @media (max-width: $tablet) {
@@ -69,7 +69,7 @@
 
 .contacts__location {
   position: relative;
-  margin: 0 auto 38px;
+  margin: 0 auto 26px;
   max-width: 78%;
   height: $map-desk;
   display: flex;
@@ -78,13 +78,13 @@
 
   @media (max-width: $desktop) {
     align-self: stretch;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     height: $map-tab;
     max-width: 100%;
   }
 
   @media (max-width: $tablet) {
-    margin: 0 -14px 30px;
+    margin: 0 -14px 26px;
     height: $map-mob;
     min-width: 100vw;
   }
@@ -125,16 +125,20 @@
 
 .contacts__list {
   @include ul();
-  margin-right: 15px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: fit-content;
+  margin: 0 auto;
 
   @media (max-width: $desktop) {
     align-items: center;
+    max-width: 100%;
   }
 
   @media (max-width: $tablet) {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     margin-right: 0;
   }
@@ -143,26 +147,34 @@
 .contacts__item {
   display: flex;
   align-items: center;
-  margin-right: 90px;
+  margin-right: 60px;
 
   &:last-of-type {
     margin-right: 0;
   }
 
+  @media (max-width: $desktop) {
+    margin-right: 0;
+  }
+
   @media (max-width: $tablet) {
-    margin: 0 0 24px 5px;
+    margin: 0 0 12px 5px;
 
     &:last-of-type {
-      margin: 0 11px 0 0;
+      margin: 0;
     }
   }
 }
 
 .contacts__svg {
-  margin-right: 16px;
+  margin-left: 10px;
 
   @media (max-width: $desktop) {
     margin-right: 13px;
+
+    &--phone {
+      margin-left: 10px;
+    }
   }
 
   @media (max-width: $tablet) {
@@ -176,6 +188,7 @@
     &--phone {
       width: 21px;
       height: 22px;
+      margin-left: 0;
     }
   }
 }
@@ -185,9 +198,18 @@
   @include a();
   text-align: left;
   color: rgba($black, 0.5);
+  padding: 12px 20px 12px 14px;
 
   &:hover {
     color: rgba($black, 0.8);
     transition: $tr;
+  }
+
+  @media (max-width: $desktop) {
+    padding: 12px 20px 12px 0;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 6px 20px 6px 0;
   }
 }

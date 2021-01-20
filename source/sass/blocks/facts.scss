@@ -31,15 +31,15 @@
 .facts__list {
   @include ul();
   margin: 49px auto 0;
-  max-width: 95%;
+  max-width: 98%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   counter-reset: myCounter;
 
   @media (max-width: $desktop) {
     margin-top: 30px;
-    flex-wrap: wrap;
-    max-width: 79%;
+    max-width: 83%;
   }
 
   @media (max-width: $tablet) {
@@ -54,7 +54,7 @@
 .facts__list li {
   @include font(22px, 34px, 400);
   padding-top: 52px;
-  margin-right: 38px;
+  // margin-right: 38px;
   width: 25%;
   position: relative;
   text-align: center;
@@ -80,7 +80,7 @@
   @media (max-width: $desktop) {
     margin-bottom: 45px;
     margin-right: 0;
-    width: 47%;
+    width: 50%;
 
     &:nth-of-type(3n):not(:last-of-type) {
       margin-bottom: 0;

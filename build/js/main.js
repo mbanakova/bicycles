@@ -50,7 +50,6 @@
   }
 
   form.addEventListener('submit', function () {
-    // evt.preventDefault();
     inputs.forEach(function (elem) {
       if (!elem.value) {
         elem.classList.remove('error');
