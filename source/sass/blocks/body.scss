@@ -1,4 +1,4 @@
-.body {
+body {
   @include font();
   @include fields();
   position: relative;
@@ -11,7 +11,7 @@
   @media (max-width: $desktop) {
     background: linear-gradient(to bottom, $bg-tablet, $bg-tablet 341px, $white 341px); // <-- если не загрузится картинка с великом
 
-    &--nojs {
+    & .nojs {
       background: linear-gradient(to bottom, $bg-tablet, $bg-tablet calc(341px + 100vh), $white calc(341px + 100vh));
     }
   }
@@ -19,7 +19,7 @@
   @media (max-width: $tablet) {
     background: linear-gradient(to bottom, $bg-dark, $bg-dark 390px, $white 390px); // <-- если не загрузится картинка с великом
 
-    &--nojs {
+    & .nojs {
       background: linear-gradient(to bottom, $bg-dark, $bg-dark calc(390px + 100vh), $white calc(390px + 100vh));
     }
   }
@@ -30,7 +30,7 @@ img {
   height: auto;
 }
 
-.body,
+body,
 *,
 *::before,
 *::after {

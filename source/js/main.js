@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var body = document.querySelector('.body');
+  var body = document.querySelector('body');
   var header = document.querySelector('.header');
   var mainNav = document.querySelector('.nav');
   var burger = document.querySelector('.nav__burger');
@@ -14,7 +14,7 @@
   var storageName = '';
   var storagePhone = '';
 
-  body.classList.remove('body--nojs');
+  body.classList.remove('nojs');
   header.classList.remove('header--nojs');
   mainNav.classList.remove('nav--nojs');
   burger.classList.remove('nav__burger--opened');
