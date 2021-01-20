@@ -133,6 +133,9 @@
 
 .header__form {
   width: 327px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media (max-width: $desktop) {
     width: 43%;
@@ -140,5 +143,24 @@
 
   @media (max-width: $tablet) {
     width: 100%;
+  }
+}
+
+.header__form-text {
+  @include font(17px, 28px, 600);
+  @include fields();
+  margin-top: 5px;
+  margin-bottom: 16px;
+  text-align: center;
+
+  @media (max-width: $desktop) {
+    @include font(18px, 28px, 600);
+    color: $black;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 20px;
   }
 }
