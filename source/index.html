@@ -18,11 +18,9 @@
     <picture>
       <source type="image/webp" media="(max-width: 767px)" srcset="img/header-mob.webp, img/header-mob@2.webp 2x">
       <source type="image/webp" media="(max-width: 1023px)" srcset="img/header-tab.webp, img/header-tab@2.webp 2x">
-      <source type="image/webp" srcset="img/header-desk.webp, img/header-desk@2.webp 2x">
-      <source media="(max-width: 767px)" srcset="img/header-mob.jpg, img/header-mob@2.jpg 2x">
-      <source media="(max-width: 1023px)" srcset="img/header-tab.jpg, img/header-tab@2.png 2x">
-      <img class="header__img" src="img/header-desk.jpg" srcset="img/header-desk@2.jpg 2x" width="1440" height="825"
-        alt="Велосипед на тёмном фоне">
+      <source type="image/webp" srcset="img/header-desk.webp 1440w, img/header-desk@2.webp 2880w">
+      <img class="header__img" src="img/header-desk.jpg" srcset="img/header-desk.jpg, img/header-desk@2.jpg 2x"
+        sizes="(max-width: 767px) 319px, (max-width: 1023px) 767px, 1440px" alt="Велосипед на тёмном фоне">
     </picture>
 
     <div class="container container--header">
@@ -90,9 +88,9 @@
               <source type="image/webp" media="(max-width: 1023px)"
                 srcset="img/bike-road-tab.webp, img/bike-road-tab@2.webp 2x">
               <source type="image/webp" srcset="img/bike-road-desk.webp, img/bike-road-desk@2.webp 2x">
-              <source media="(max-width: 1023px)" srcset="img/bike-road-tab.png, img/bike-road-tab@2.png 2x">
-              <img class="types__img" src="img/bike-road-desk.png" srcset="img/bike-road-desk@2.png 2x" width="342"
-                height="503" alt="Велосипед у стены">
+              <img class="types__img" src="img/bike-road-desk.png"
+                srcset="img/bike-road-desk.png 342w, img/bike-road-desk@2.png 633w"
+                sizes="(max-width: 1023px) 270px, 342px" alt="Велосипед у стены">
             </picture>
             <p class="types__description">Дорожный велосипед</p>
           </li>
@@ -101,9 +99,9 @@
               <source type="image/webp" media="(max-width: 1023px)"
                 srcset="img/bike-mount-tab.webp, img/bike-mount-tab@2.webp 2x">
               <source type="image/webp" srcset="img/bike-mount-desk.webp, img/bike-mount-desk@2.webp 2x">
-              <source media="(max-width: 1023px)" srcset="img/bike-mount-tab.png, img/bike-mount-tab@2.png 2x">
-              <img class="types__img" src="img/bike-mount-desk.png" srcset="img/bike-mount-desk@2.png 2x" width="342"
-                height="566" alt="Велосипед на горе">
+              <img class="types__img" src="img/bike-mount-desk.png"
+                srcset="img/bike-mount-desk.png 342w, img/bike-mount-desk@2.png 633w"
+                sizes="(max-width: 1023px) 270px, 342px" alt="Велосипед на горе">
             </picture>
             <p class="types__description">Горный велосипед</p>
           </li>
@@ -112,9 +110,9 @@
               <source type="image/webp" media="(max-width: 1023px)"
                 srcset="img/bike-kid-tab.webp, img/bike-kid-tab@2.webp 2x">
               <source type="image/webp" srcset="img/bike-kid-desk.webp, img/bike-kid-desk@2.webp 2x">
-              <source media="(max-width: 1023px)" srcset="img/bike-kid-tab.png, img/bike-kid-tab@2.png 2x">
-              <img class="types__img types__img--upper" src="img/bike-kid-desk.png" srcset="img/bike-kid-desk@2.png 2x"
-                width="342" height="512" alt="Розовый детский велосипед">
+              <img class="types__img types__img--upper" src="img/bike-kid-desk.png"
+                srcset="img/bike-kid-desk.png 342w, img/bike-kid-desk@2.png 633w"
+                sizes="(max-width: 1023px) 270px, 342px" alt="Розовый детский велосипед">
             </picture>
             <p class="types__description">Детский велосипед</p>
           </li>
@@ -128,10 +126,13 @@
         <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
         <div class="video__clip">
           <picture>
-            <source media="(max-width: 767px)" srcset="img/video-mob.png, img/video-mob@2.png 2x">
-            <source media="(max-width: 1023px)" srcset="img/video-tab.png, img/video-tab@2.png 2x">
-            <img class="video__img" src="img/video-desk.png" srcset="img/video-desk@2.png 2x" width="929" height="522"
-              alt="Видеоплеер">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/video-mob.webp, img/video-mob@2.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/video-tab.webp, img/video-tab@2.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/video-desk.webp, img/video-desk@2.webp 2x">
+            <img class="video__img" src="img/video-desk.png"
+              srcset="img/video-desk.png 929w, img/video-desk@2.png 1858w"
+              sizes="(max-width: 767px) 288px, (max-width: 1023px) 503px, 929px" alt="Видеоплеер">
           </picture>
           <button class="video__play" type="button">
             <svg class="video__svg" width="14" height="19" role="img" aria-label="Кнопка play">
@@ -158,10 +159,8 @@
           <source type="image/webp" media="(max-width: 767px)" srcset="img/map-mob.webp, img/map-mob@2.webp 2x">
           <source type="image/webp" media="(max-width: 1023px)" srcset="img/map-tab.webp, img/map-tab@2.webp 2x">
           <source type="image/webp" srcset="img/map-desk.webp, img/map-desk@2.webp 2x">
-          <source media="(max-width: 767px)" srcset="img/map-mob.png, img/map-mob@2.png 2x">
-          <source media="(max-width: 1023px)" srcset="img/map-tab.png, img/map-tab@2.png 2x">
-          <img class="contacts__image" src="img/map-desk.png" srcset="img/map-desk@2.png 2x" width="957" height="530"
-            alt="Магазин на карте">
+          <img class="contacts__image" src="img/map-desk.png" srcset="img/map-desk.png 957w, img/map-desk@2.png 1914w"
+            sizes="(max-width: 767px) 320px,(max-width: 1023px) 698px, 957px" alt="Магазин на карте">
         </picture>
       </div>
       <ul class="contacts__list">
