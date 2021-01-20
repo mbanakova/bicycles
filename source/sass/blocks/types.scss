@@ -35,14 +35,15 @@
 .types__list {
   @include ul();
   margin: 50px auto 0;
-  max-width: 92%;
+  max-width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 
   @media (max-width: $desktop) {
     margin-top: 30px;
     justify-content: space-around;
-    flex-wrap: wrap;
+    max-width: 92%;
   }
 
   @media (max-width: $tablet) {
@@ -54,12 +55,10 @@
 
 .types__item {
   position: relative;
-  width: 33%;
-  margin-right: 47px;
-
-  &:last-of-type {
-    margin-right: 0;
-  }
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &--road {
     margin-top: 10px;
@@ -153,8 +152,7 @@
     }
 
     &:last-of-type {
-      margin-bottom: 0;
-      margin-left: 0;
+      margin: 0 auto;
     }
 
     &--road::after {
