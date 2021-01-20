@@ -10,6 +10,24 @@
   }
 }
 
+.facts h2 {
+  @include font(30px, 30px, 600);
+  @include fields();
+  color: $dark;
+  text-align: center;
+  letter-spacing: -0.005em;
+  max-width: 70%;
+  margin: 0 auto;
+
+  @media (max-width: $desktop) {
+    @include font(24px, 41px, 600);
+  }
+
+  @media (max-width: $tablet) {
+    max-width: 100%;
+  }
+}
+
 .facts__list {
   @include ul();
   margin: 49px auto 0;
@@ -33,7 +51,7 @@
   }
 }
 
-.facts__item {
+.facts__list li {
   @include font(22px, 34px, 400);
   padding-top: 52px;
   margin-right: 38px;

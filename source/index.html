@@ -19,7 +19,7 @@
       <source type="image/webp" media="(max-width: 767px)" srcset="img/header-mob.webp, img/header-mob@2.webp 2x">
       <source type="image/webp" media="(max-width: 1023px)" srcset="img/header-tab.webp, img/header-tab@2.webp 2x">
       <source type="image/webp" srcset="img/header-desk.webp, img/header-desk@2.webp 2x">
-      <img class="header__img" src="img/header-desk.jpg" srcset="img/header-desk.jpg 1440w, img/header-desk@2.jpg 2880w"
+      <img src="img/header-desk.jpg" srcset="img/header-desk.jpg 1440w, img/header-desk@2.jpg 2880w"
         sizes="(max-width: 767px) 319px, (max-width: 1023px) 767px, 1440px" alt="Велосипед на тёмном фоне">
     </picture>
 
@@ -49,12 +49,12 @@
               <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
             </svg>
           </a>
-          <p class="header__title">Мы продаем велосипеды</p>
-          <p class="header__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+          <b>Мы продаем велосипеды</b>
+          <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
         </div>
 
-        <form class="header__form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="header__form-text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+        <form class="header__form form" action="https://echo.htmlacademy.ru" method="post">
+          <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <input type="text" name="user-name" id="user-name" placeholder="Введите Ваше Имя" required>
           <label class="visually-hidden" for="user-name">Имя пользователя</label>
           <input type="text" name="user-phone" id="user-phone" placeholder="Введите Ваш номер телефона" required>
@@ -69,52 +69,52 @@
     <h1 class="visually-hidden">Moon - магазин велосипедов</h1>
     <section class="facts" id="facts">
       <div class="container">
-        <h2 class="section-title">Несколько фактов о нас</h2>
+        <h2>Несколько фактов о нас</h2>
         <ol class="facts__list">
-          <li class="facts__item">Самый широкий выбор велосипедов!</li>
-          <li class="facts__item">Доставка велосипедов по всей России!</li>
-          <li class="facts__item">Большой выбор крутых аксессуаров!</li>
-          <li class="facts__item">Профессиональные консультации!</li>
+          <li>Самый широкий выбор велосипедов!</li>
+          <li>Доставка велосипедов по всей России!</li>
+          <li>Большой выбор крутых аксессуаров!</li>
+          <li>Профессиональные консультации!</li>
         </ol>
       </div>
     </section>
 
     <section class="types" id="types">
       <div class="container">
-        <h2 class="section-title">Виды велосипедов</h2>
+        <h2>Виды велосипедов</h2>
         <ul class="types__list">
           <li class="types__item types__item--road">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
                 srcset="img/bike-road-tab.webp, img/bike-road-tab@2.webp 2x">
               <source type="image/webp" srcset="img/bike-road-desk.webp, img/bike-road-desk@2.webp 2x">
-              <img class="types__img" src="img/bike-road-desk.png"
+              <img src="img/bike-road-desk.png"
                 srcset="img/bike-road-desk.png 342w, img/bike-road-desk@2.png 633w"
                 sizes="(max-width: 1023px) 270px, 342px" alt="Велосипед у стены">
             </picture>
-            <p class="types__description">Дорожный велосипед</p>
+            <p>Дорожный велосипед</p>
           </li>
           <li class="types__item types__item--mount">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
                 srcset="img/bike-mount-tab.webp, img/bike-mount-tab@2.webp 2x">
               <source type="image/webp" srcset="img/bike-mount-desk.webp, img/bike-mount-desk@2.webp 2x">
-              <img class="types__img" src="img/bike-mount-desk.png"
+              <img src="img/bike-mount-desk.png"
                 srcset="img/bike-mount-desk.png 342w, img/bike-mount-desk@2.png 633w"
                 sizes="(max-width: 1023px) 270px, 342px" alt="Велосипед на горе">
             </picture>
-            <p class="types__description">Горный велосипед</p>
+            <p>Горный велосипед</p>
           </li>
           <li class="types__item types__item--kid">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
                 srcset="img/bike-kid-tab.webp, img/bike-kid-tab@2.webp 2x">
               <source type="image/webp" srcset="img/bike-kid-desk.webp, img/bike-kid-desk@2.webp 2x">
-              <img class="types__img types__img--upper" src="img/bike-kid-desk.png"
+              <img src="img/bike-kid-desk.png"
                 srcset="img/bike-kid-desk.png 342w, img/bike-kid-desk@2.png 633w"
                 sizes="(max-width: 1023px) 270px, 342px" alt="Розовый детский велосипед">
             </picture>
-            <p class="types__description">Детский велосипед</p>
+            <p>Детский велосипед</p>
           </li>
         </ul>
       </div>
@@ -122,14 +122,14 @@
 
     <section class="video" id="video">
       <div class="container">
-        <h2 class="section-title section-title--white">Видео про велосипеды</h2>
-        <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <h2>Видео про велосипеды</h2>
+        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
         <div class="video__clip">
           <picture>
             <source type="image/webp" media="(max-width: 767px)" srcset="img/video-mob.webp, img/video-mob@2.webp 2x">
             <source type="image/webp" media="(max-width: 1023px)" srcset="img/video-tab.webp, img/video-tab@2.webp 2x">
             <source type="image/webp" srcset="img/video-desk.webp, img/video-desk@2.webp 2x">
-            <img class="video__img" src="img/video-desk.png"
+            <img src="img/video-desk.png"
               srcset="img/video-desk.png 929w, img/video-desk@2.png 1858w"
               sizes="(max-width: 767px) 288px, (max-width: 1023px) 503px, 929px" alt="Видеоплеер">
           </picture>
@@ -146,8 +146,8 @@
   <footer class="contacts" id="contacts">
     <div class="container">
       <div class="contacts__top">
-        <p class="section-title section-title--contacts-mob">Как нас найти?</p>
-        <p class="contacts__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+        <h2>Как нас найти?</h2>
+        <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
       </div>
       <div class="contacts__location">
         <iframe class="contacts__iframe"
@@ -158,7 +158,7 @@
           <source type="image/webp" media="(max-width: 767px)" srcset="img/map-mob.webp, img/map-mob@2.webp 2x">
           <source type="image/webp" media="(max-width: 1023px)" srcset="img/map-tab.webp, img/map-tab@2.webp 2x">
           <source type="image/webp" srcset="img/map-desk.webp, img/map-desk@2.webp 2x">
-          <img class="contacts__image" src="img/map-desk.png" srcset="img/map-desk.png 957w, img/map-desk@2.png 1914w"
+          <img src="img/map-desk.png" srcset="img/map-desk.png 957w, img/map-desk@2.png 1914w"
             sizes="(max-width: 767px) 320px,(max-width: 1023px) 698px, 957px" alt="Магазин на карте">
         </picture>
       </div>

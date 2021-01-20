@@ -1,5 +1,29 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-input {
+.form p {
+  @include font(17px, 28px, 600);
+  @include fields();
+  margin-top: 5px;
+  margin-bottom: 16px;
+  text-align: center;
+
+  @media (max-width: $desktop) {
+    @include font(18px, 28px, 600);
+    color: $black;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 20px;
+  }
+}
+
+.form input {
   @include font(15px, 24px, 400);
   margin-bottom: 20px;
   padding: 13px 29px 10px;
@@ -36,7 +60,7 @@ input {
   }
 }
 
-form button {
+.form button {
   @include button();
   background-color: $accent;
   border-radius: 6px;

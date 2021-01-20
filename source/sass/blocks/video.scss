@@ -16,7 +16,28 @@
   }
 }
 
-.video__text {
+.video h2 {
+  @include font(30px, 30px, 600);
+  @include fields();
+  text-align: center;
+  letter-spacing: -0.005em;
+  max-width: 70%;
+  margin: 0 auto;
+  color: $white;
+  padding-right: 10px;
+
+  @media (max-width: $desktop) {
+    @include font(24px, 41px, 600);
+      padding-right: 0;
+  }
+
+  @media (max-width: $tablet) {
+    max-width: 100%;
+    margin-right: 12px;
+  }
+}
+
+.video p {
   @include font(16px, 28px, 300);
   width: 340px;
   margin: 19px auto 56px;

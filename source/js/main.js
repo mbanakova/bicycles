@@ -49,8 +49,7 @@
     userName.focus();
   }
 
-  form.addEventListener('submit', function (evt) {
-    evt.preventDefault();
+  form.addEventListener('submit', function () {
     inputs.forEach(function (elem) {
       if (!elem.value) {
         elem.classList.remove('error');

@@ -10,6 +10,26 @@
   }
 }
 
+.contacts h2 {
+  @include font(30px, 30px, 600);
+  @include fields();
+  color: $dark;
+  text-align: center;
+  letter-spacing: -0.005em;
+  max-width: 70%;
+  margin: 0 auto;
+
+  @media (max-width: $desktop) {
+    @include font(24px, 41px, 600);
+  }
+
+  @media (max-width: $tablet) {
+    max-width: 100%;
+
+      @include font(18px, 30px, 600);
+  }
+}
+
 .contacts__top {
   margin-right: 9px;
   margin-bottom: 40px;
@@ -26,7 +46,7 @@
   }
 }
 
-.contacts__text {
+.contacts__top p {
   @include font(17px, 31px, 400);
   @include fields();
   margin-top: 29px;
@@ -84,7 +104,7 @@
   }
 }
 
-.contacts__image {
+.contacts img {
   position: absolute;
   top: 0;
   left: 50%;
