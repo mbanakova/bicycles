@@ -28,7 +28,7 @@
 
   @media (max-width: $desktop) {
     @include font(24px, 41px, 600);
-      padding-right: 0;
+    padding-right: 0;
   }
 
   @media (max-width: $tablet) {

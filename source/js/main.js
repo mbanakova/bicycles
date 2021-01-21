@@ -31,10 +31,6 @@
     });
   });
 
-  inputs.forEach(function (elem) {
-    elem.removeAttribute('required');
-  });
-
   try {
     storageName = localStorage.getItem('user');
     storagePhone = localStorage.getItem('phone');

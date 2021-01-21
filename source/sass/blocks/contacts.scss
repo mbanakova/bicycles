@@ -24,9 +24,8 @@
   }
 
   @media (max-width: $tablet) {
+    @include font(18px, 30px, 600);
     max-width: 100%;
-
-      @include font(18px, 30px, 600);
   }
 }
 
