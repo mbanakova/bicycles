@@ -14,15 +14,26 @@
   var storageName = '';
   var storagePhone = '';
 
-  body.classList.remove('nojs');
-  header.classList.remove('header--nojs');
-  mainNav.classList.remove('nav--nojs');
-  burger.classList.remove('nav__burger--opened');
-  mainNav.classList.remove('nav--opened');
-  burger.addEventListener('click', function () {
-    burger.classList.toggle('nav__burger--opened');
-    mainNav.classList.toggle('nav--opened');
-  });
+  var removeNoJs = function () {
+    if (body) {
+      body.classList.remove('nojs');
+    }
+    if (header) {
+      header.classList.remove('header--nojs');
+    }
+    if (mainNav) {
+      mainNav.classList.remove('nav--nojs');
+      mainNav.classList.remove('nav--opened');
+    }
+    if (burger) {
+      burger.classList.remove('nav__burger--opened');
+      burger.addEventListener('click', function () {
+        burger.classList.toggle('nav__burger--opened');
+        mainNav.classList.toggle('nav--opened');
+      });
+    }
+  };
+  removeNoJs();
 
   links.forEach(function (elem) {
     elem.addEventListener('click', function () {
@@ -39,25 +50,30 @@
   }
 
   if (storageName && storagePhone) {
-    userName.value = storageName;
-    userPhone.value = storagePhone;
+    if (userName || userPhone) {
+      userName.value = storageName;
+      userPhone.value = storagePhone;
+    }
   } else {
     userName.focus();
   }
 
-  form.addEventListener('submit', function () {
-    inputs.forEach(function (elem) {
-      if (!elem.value) {
-        elem.classList.remove('error');
-        elem.classList.add('error');
-      } else {
-        if (isStorageSupport) {
-          localStorage.setItem('user', userName.value);
-          localStorage.setItem('phone', userPhone.value);
+  if (form) {
+    form.addEventListener('submit', function () {
+      inputs.forEach(function (elem) {
+        if (!elem.value) {
+          console.log(elem);
+          elem.classList.remove('error');
+          elem.classList.add('error');
+        } else {
+          if (isStorageSupport) {
+            localStorage.setItem('user', userName.value);
+            localStorage.setItem('phone', userPhone.value);
+          }
         }
-      }
+      });
     });
-  });
+  }
 
   document.addEventListener('click', function () {
     inputs.forEach(function (elem) {
