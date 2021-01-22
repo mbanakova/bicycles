@@ -58,7 +58,7 @@
           <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <input type="text" name="user-name" id="user-name" placeholder="Введите Ваше Имя" required="">
           <label class="visually-hidden" for="user-name">Имя пользователя</label>
-          <input type="tel" name="user-phone" id="user-phone" placeholder="Введите Ваш номер телефона" required="">
+          <input type="tel" name="user-phone" id="user-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="ХХХ-ХХХ-ХХХХ" placeholder="Введите Ваш номер телефона" required="">
           <label class="visually-hidden" for="user-phone">Контактный телефон</label>
           <button type="submit">Подобрать велосипед мечты</button>
         </form>
