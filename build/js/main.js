@@ -62,7 +62,6 @@
     form.addEventListener('submit', function () {
       inputs.forEach(function (elem) {
         if (!elem.value) {
-          console.log(elem);
           elem.classList.remove('error');
           elem.classList.add('error');
         } else {
