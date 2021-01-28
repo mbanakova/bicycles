@@ -32,6 +32,11 @@
         mainNav.classList.toggle('nav--opened');
       });
     }
+    if (inputs) {
+      inputs.forEach(function (elem) {
+        elem.removeAttribute('required');
+      });
+    }
   };
   removeNoJs();
 
@@ -59,9 +64,10 @@
   }
 
   if (form) {
-    form.addEventListener('submit', function () {
+    form.addEventListener('submit', function (event) {
       inputs.forEach(function (elem) {
         if (!elem.value) {
+          event.preventDefault();
           elem.classList.remove('error');
           elem.classList.add('error');
         } else {
@@ -76,7 +82,14 @@
 
   document.addEventListener('click', function () {
     inputs.forEach(function (elem) {
-      elem.classList.remove('error');
+      if (elem.classList.contains('error')) {
+        elem.classList.remove('error');
+      }
     });
+    // for (var i = 0; i < inputs.length; i++) {
+    //   if (inputs[i].classList.contains('error')) {
+    //     inputs[i].classList.remove('error');
+    //   }
+    // }
   });
 })();
